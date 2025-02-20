@@ -4,18 +4,21 @@ phases:
   install:
     runtime-versions:
       nodejs: 18
+   
     commands:
-      - node -v
-      - npm -v
-      - npm install
-      
+        # install npm
+        - npm install
+       
   build:
     commands:
-      - npm run build
-
+        # run build script
+        - npm run build
+     
 artifacts:
+  # include all files required to run the application
   files:
-    - build/**/*
+    - public/**/*
+    - src/**/*
     - package.json
     - appspec.yml
     - scripts/**/*
